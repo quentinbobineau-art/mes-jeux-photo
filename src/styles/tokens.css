@@ -1,0 +1,19 @@
+:root{
+  --bg:#EEF5FB; --surface:#FFFFFF; --ink:#1D2A3A; --muted:#5B6B7E; --line:#D5E1EC;
+  --sun:#FFC93C; --coral:#FF6F59; --sky:#2F80ED; --leaf:#2FA36B; --grape:#8A5CF6;
+  --card-back:#2F80ED; --card-dot:#5C9CF2; --ok:#2FA36B; --sel:#FFC93C;
+  --mint:#9FD8BC; --peach:#F9B3A6;
+  --display:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --body:"Nunito","Segoe UI",system-ui,sans-serif;
+  --r:18px;
+  --tap:64px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#141C26; --surface:#1E2935; --ink:#EEF3F8; --muted:#A3B1C1; --line:#2E3C4C;
+  --sun:#FFCF52; --coral:#FF8270; --sky:#5C9CF2; --leaf:#45BF85; --grape:#A283FA;
+  --card-back:#3B6FC4; --card-dot:#5689DB; --ok:#45BF85; --sel:#FFCF52; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141C26; --surface:#1E2935; --ink:#EEF3F8; --muted:#A3B1C1; --line:#2E3C4C;
+  --sun:#FFCF52; --coral:#FF8270; --sky:#5C9CF2; --leaf:#45BF85; --grape:#A283FA;
+  --card-back:#3B6FC4; --card-dot:#5689DB; --ok:#45BF85; --sel:#FFCF52; color-scheme:dark}

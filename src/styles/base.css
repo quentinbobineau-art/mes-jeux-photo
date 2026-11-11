@@ -1,0 +1,22 @@
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%;margin:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;overscroll-behavior:none;
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{-webkit-user-drag:none;user-select:none}
+.app{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:20px;
+  padding-top:max(16px,env(safe-area-inset-top,0px));padding-bottom:max(28px,calc(env(safe-area-inset-bottom,0px) + 16px))}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:600}
+button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}
+button:focus-visible,label:focus-within{outline:3px solid var(--sky);outline-offset:3px}
+[hidden]{display:none!important}
+.ico{width:26px;height:26px;flex:0 0 auto}
+.hint{color:var(--muted);font-size:.9rem;margin:0}
+.hint.small{font-size:.8rem}
+/* Pendant une partie : pas de rebond ; le plateau bloque le scroll au doigt (touch-action sur .stage) */
+html.playing,html.playing body{overscroll-behavior:none}
+@keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
